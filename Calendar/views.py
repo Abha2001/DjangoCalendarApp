@@ -9,12 +9,12 @@ from .utils import Calendar
 
 class CalendarView(generic.ListView):
     model = Events
-    template_name = 'cal/calendar.html'
+    template_name = 'Calendar/calendar.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        d = get_date(self.request.GET.get('day', 0))
+        d = get_date(self.request.GET.get('day', None))
 
         cal = Calendar(d.year, d.month)
 
