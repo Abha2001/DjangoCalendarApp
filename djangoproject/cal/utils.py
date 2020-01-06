@@ -17,7 +17,7 @@ class EventCalendar(HTMLCalendar):
 
 		if day==0:
 			return '<td class="noday">&nbsp;</td>'
-		return '<td class="%s">%d%s</td>'%(self.cssclasses[weekday],day,events_html)
+		return '<td class="date">%d%s</td>'%(day,events_html)
 
 	def formatweek(self,theweek,events):
 		s=''.join(self.formatday(d,wd,events) for (d,wd) in theweek)
@@ -28,7 +28,7 @@ class EventCalendar(HTMLCalendar):
 
 		v=[]
 		a=v.append
-		a('<table border="0" cell padding="0" cellspacing="0" class="month">')
+		a('<table border="0" cell padding="0" cellspacing="0" class="table table-striped table-hover table-bordered">')
 		a('\n')
 		a(self.formatmonthname(theyear,themonth,withyear=withyear))
 		a('\n')
