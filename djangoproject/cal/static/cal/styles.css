@@ -1,0 +1,36 @@
+.calendar {
+  width: 98%;
+  margin: auto;
+  font-size: 13px;
+}
+
+.month {
+  color: orchid;
+  font-size: 30px;
+}
+
+.date {
+  color: darkblue;
+  font-size: 20px;
+}
+
+ul {
+  height: 100%;
+  padding: 0px 5px 0px 20px;
+}
+
+a {
+  font-size: 16px;
+  color: green;
+}
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  margin: 15px;
+}
